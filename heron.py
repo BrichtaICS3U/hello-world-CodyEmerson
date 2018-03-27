@@ -14,6 +14,6 @@ print("No ones or zeros")
 def heron(S, x):
   """Compute the square root of the number x using Heron's method. The accuracy is defaulted to three decimal places, but you
   can use a larger or smaller number if you wish. The smaller the number, the more time the calculation will take."""
-  while x**2  - S > 0.001:
+  while abs(x**2  - S) > 0.001:
      x = (x+(S/x))/2
   return x
