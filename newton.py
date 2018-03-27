@@ -11,9 +11,7 @@
 print("Order of input: Number to square root, rooted number guess")
 print("No ones or zeros")
 
-def heron(S, x):
-  """Compute the square root of the number x using Heron's method. The accuracy is defaulted to three decimal places, but you
-  can use a larger or smaller number if you wish. The smaller the number, the more time the calculation will take."""
+def newton(S, x):
   while abs(x**2  - S) > 0.001:
-     x = (x+(S/x))/2
+    x = x-((x**2-S)/(2*x))
   return round(x, 3)
