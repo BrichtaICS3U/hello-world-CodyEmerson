@@ -8,8 +8,12 @@
 #https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method
 #
 
-def heron(x, accuracy=0.001):
+print("Order of input: Number to square root, rooted number guess")
+print("No ones or zeros")
+
+def heron(S, x):
   """Compute the square root of the number x using Heron's method. The accuracy is defaulted to three decimal places, but you
   can use a larger or smaller number if you wish. The smaller the number, the more time the calculation will take."""
-  
-  return 1
+  while x**2  - S > 0.001:
+     x = (x+(S/x))/2
+  return x
